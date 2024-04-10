@@ -2,7 +2,66 @@
 export default {
     data() {
         return {
-
+            itemsList: [
+                {
+                    defaultImage: '/1.webp',
+                    hoverImage: '/1b.webp',
+                    discount: 50,
+                    sustainability: true,
+                    brand: "Levi's",
+                    name: 'RELAXED FIT TEE UNISEX',
+                    price: '29,99',
+                    discountedPrice: '14,99'
+                },
+                {
+                    defaultImage: '/2.webp',
+                    hoverImage: '/2b.webp',
+                    discount: 30,
+                    sustainability: false,
+                    brand: 'Guess',
+                    name: 'ROSES TEE',
+                    price: '29,99',
+                    discountedPrice: '20,99'
+                },
+                {
+                    defaultImage: '/3.webp',
+                    hoverImage: '/3b.webp',
+                    discount: 30,
+                    sustainability: false,
+                    brand: 'Come zucchero filato',
+                    name: 'VOGLIA DI COLORI PASTELLO',
+                    price: '184,99',
+                    discountedPrice: '129,99'
+                },
+                {
+                    defaultImage: '/4.webp',
+                    hoverImage: '/4b.webp',
+                    discount: 50,
+                    sustainability: true,
+                    brand: "Levi's",
+                    name: 'TEE UNISEX',
+                    price: '29,99',
+                    discountedPrice: '14,99'
+                },
+                {
+                    defaultImage: '/5.webp',
+                    hoverImage: '/5b.webp',
+                    discount: 0,
+                    sustainability: true,
+                    brand: 'Maya deluxe',
+                    name: 'STRIPE BODICE',
+                    price: '99,99',
+                },
+                {
+                    defaultImage: '/6.webp',
+                    hoverImage: '/6b.webp',
+                    discount: 0,
+                    sustainability: true,
+                    brand: 'Esprit',
+                    name: 'MAGLIONE - BLACK',
+                    price: '29,99'
+                }
+            ]
         }
     }
 }
@@ -13,104 +72,24 @@ export default {
         <div class="section">
             <div class="container">
                 <div class="row">
-                    <div class="col-4">
+                    <div v-for="(item, i) in itemsList" class="col-4">
                         <div class="card product">
                             <div class="card__header">
-                                <img src="/1.webp" alt="">
-                                <img src="/1b.webp" alt="" class="overlay">
+                                <img :src="item.defaultImage" alt="">
+                                <img :src="item.hoverImage" alt="" class="overlay">
                                 <div class="fav__heart">&hearts;</div>
                                 <div class="badges">
-                                    <div class="discount__badge">-50%</div>
-                                    <div class="sustainability__badge">Sostenibilità</div>
+                                    <div v-if="item.discount !== 0" class="discount__badge">-{{ item.discount }}%</div>
+                                    <div v-if="item.sustainability" class="sustainability__badge">Sostenibilità</div>
                                 </div>
                             </div>
                             <div class="card__body">
-                                <p class="item__brand">Levi's</p>
-                                <h3 class="item__name">RELAXED FIT TEE UNISEX</h3>
-                                <p class="price">14,99€ <span class="pre-sale-price">29,99€</span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="card product">
-                            <div class="card__header">
-                                <img src="/2.webp" alt="">
-                                <img src="/2b.webp" alt="" class="overlay">
-                                <div class="fav__heart">&hearts;</div>
-                                <div class="badges">
-                                    <div class="discount__badge">-30%</div>
-                                </div>
-                            </div>
-                            <div class="card__body">
-                                <p class="item__brand">Guess</p>
-                                <h3 class="item__name">ROSES TEE</h3>
-                                <p class="price">20,99€ <span class="pre-sale-price">29,99€</span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="card product">
-                            <div class="card__header">
-                                <img src="/3.webp" alt="">
-                                <img src="/3b.webp" alt="" class="overlay">
-                                <div class="fav__heart">&hearts;</div>
-                                <div class="badges">
-                                    <div class="discount__badge">-30%</div>
-                                </div>
-                            </div>
-                            <div class="card__body">
-                                <p class="item__brand">Come Zucchero Filato</p>
-                                <h3 class="item__name">VOGLIA DI COLORI PASTELLO</h3>
-                                <p class="price">129,99€ <span class="pre-sale-price">184,99€</span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="card product">
-                            <div class="card__header">
-                                <img src="/4.webp" alt="">
-                                <img src="/4b.webp" alt="" class="overlay">
-                                <div class="fav__heart">&hearts;</div>
-                                <div class="badges">
-                                    <div class="discount__badge">-50%</div>
-                                    <div class="sustainability__badge">Sostenibilità</div>
-                                </div>
-                            </div>
-                            <div class="card__body">
-                                <p class="item__brand">Levi's</p>
-                                <h3 class="item__name">TEE UNISEX</h3>
-                                <p class="price">14,99€ <span class="pre-sale-price">29,99€</span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="card product">
-                            <div class="card__header">
-                                <img src="/5.webp" alt="">
-                                <img src="/5b.webp" alt="" class="overlay">
-                                <div class="fav__heart">&hearts;</div>
-                            </div>
-                            <div class="card__body">
-                                <p class="item__brand">Maya Deluxe</p>
-                                <h3 class="item__name">STRIPE BODICE</h3>
-                                <p class="price">99,99€</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="card product">
-                            <div class="card__header">
-                                <img src="/6.webp" alt="">
-                                <img src="/6b.webp" alt="" class="overlay">
-                                <div class="fav__heart">&hearts;</div>
-                                <div class="badges">
-                                    <div class="sustainability__badge">Sostenibilità</div>
-                                </div>
-                            </div>
-                            <div class="card__body">
-                                <p class="item__brand">Esprit</p>
-                                <h3 class="item__name">MAGLIONE - BLACK</h3>
-                                <p class="price">29,99€</p>
+                                <p class="item__brand">{{ item.brand }}</p>
+                                <h3 class="item__name">{{ item.name }}</h3>
+                                <p v-if="item.discount !== 0" class="price">{{ item.discountedPrice }}€
+                                    <span class="pre-sale-price">{{ item.price }}€</span>
+                                </p>
+                                <p v-else class="price">{{ item.price }}</p>
                             </div>
                         </div>
                     </div>
