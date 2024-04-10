@@ -108,6 +108,7 @@
     padding: 4px 8px;
     top: 20px;
     right: 0px;
+    cursor: pointer;
 }
 
 .item__brand {
@@ -190,18 +191,4 @@
 
 .bold-text {
     font-weight: 700;
-}
-
-
-
-
-
-/* Debug */
-
-.debug .container {
-    border: 1px solid black;
-}
-
-.debug [class^="col"] {
-    border: 1px solid blue;
 }

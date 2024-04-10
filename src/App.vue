@@ -1,15 +1,21 @@
 <script>
-import HomePage from './components/HomePage.vue'
+import HomeHeader from './components/HomeHeader.vue'
+import HomeMain from './components/HomeMain.vue'
+import HomeFooter from './components/HomeFooter.vue'
 
 export default {
   components: {
-    HomePage
+    HomeHeader,
+    HomeMain,
+    HomeFooter
   }
 }
 </script>
 
 <template>
-  <HomePage />
+  <HomeHeader />
+  <HomeMain />
+  <HomeFooter />
 </template>
 
 <style lang="scss">
