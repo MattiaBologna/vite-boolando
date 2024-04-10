@@ -1,6 +1,19 @@
 <script>
 export default {
-
+    data() {
+        return {
+            headerLinks: [
+                'Donna',
+                'Uomo',
+                'Bambini'
+            ],
+            headerIcons: [
+                '/user-solid.svg',
+                '/heart-solid.svg',
+                '/bag-shopping-solid.svg',
+            ]
+        }
+    }
 }
 </script>
 
@@ -9,9 +22,7 @@ export default {
         <nav class="container">
             <div class="row">
                 <div class="col-4 text-align-left">
-                    <a class="header-link" href="#">Donna</a>
-                    <a class="header-link" href="#">Uomo</a>
-                    <a class="header-link" href="#">Bambini</a>
+                    <a v-for="(link, i) in headerLinks" class="header-link" href="#">{{ headerLinks[i] }}</a>
                 </div>
                 <div class="col-4">
                     <a href="#">
@@ -19,15 +30,8 @@ export default {
                     </a>
                 </div>
                 <div class="col-4 text-align-right">
-                    <a href="#">
-                        <img class="header-icons" src="/user-solid.svg" alt="">
-                    </a>
-                    <a href="#">
-                        <img class="header-icons" src="/heart-solid.svg" alt="">
-                    </a>
-                    <a href="#">
-                        <img class="header-icons" src="/bag-shopping-solid.svg" alt="">
-
+                    <a v-for="(icon, i) in headerIcons" href="#">
+                        <img class="header-icons" :src="icon" alt="">
                     </a>
                 </div>
             </div>
