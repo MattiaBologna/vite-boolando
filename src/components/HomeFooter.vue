@@ -19,7 +19,7 @@ export default {
                 <div class="col-6">
                     <div class="footer-flex text-align-right">
                         <span class="col-1 bold-text">Trovaci anche su</span>
-                        <div class="col-1">
+                        <div class="col-1 footer-icons">
                             <a class="social-logos" href="#">
                                 <img src="/twitter.svg" alt="">
                             </a>
