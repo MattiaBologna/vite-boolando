@@ -15,18 +15,18 @@ export default {
                 </div>
                 <div class="col-4">
                     <a href="#">
-                        <img src="../../public/boolean-logo.png" alt="Logo" class="header-logo">
+                        <img src="/boolean-logo.png" alt="Logo" class="header-logo">
                     </a>
                 </div>
                 <div class="col-4 text-align-right">
                     <a href="#">
-                        <img class="header-icons" src="../../public//user-solid.svg" alt="">
+                        <img class="header-icons" src="/user-solid.svg" alt="">
                     </a>
                     <a href="#">
-                        <img class="header-icons" src="../../public//heart-solid.svg" alt="">
+                        <img class="header-icons" src="/heart-solid.svg" alt="">
                     </a>
                     <a href="#">
-                        <img class="header-icons" src="../../public//bag-shopping-solid.svg" alt="">
+                        <img class="header-icons" src="/bag-shopping-solid.svg" alt="">
 
                     </a>
                 </div>
@@ -41,8 +41,8 @@ export default {
                     <div class="col-4">
                         <div class="card product">
                             <div class="card__header">
-                                <img src="../../public//1.webp" alt="">
-                                <img src="../../public//1b.webp" alt="" class="overlay">
+                                <img src="/1.webp" alt="">
+                                <img src="/1b.webp" alt="" class="overlay">
                                 <div class="fav__heart">&hearts;</div>
                                 <div class="badges">
                                     <div class="discount__badge">-50%</div>
@@ -59,8 +59,8 @@ export default {
                     <div class="col-4">
                         <div class="card product">
                             <div class="card__header">
-                                <img src="../../public//2.webp" alt="">
-                                <img src="../../public//2b.webp" alt="" class="overlay">
+                                <img src="/2.webp" alt="">
+                                <img src="/2b.webp" alt="" class="overlay">
                                 <div class="fav__heart">&hearts;</div>
                                 <div class="badges">
                                     <div class="discount__badge">-30%</div>
@@ -76,8 +76,8 @@ export default {
                     <div class="col-4">
                         <div class="card product">
                             <div class="card__header">
-                                <img src="../../public//3.webp" alt="">
-                                <img src="../../public//3b.webp" alt="" class="overlay">
+                                <img src="/3.webp" alt="">
+                                <img src="/3b.webp" alt="" class="overlay">
                                 <div class="fav__heart">&hearts;</div>
                                 <div class="badges">
                                     <div class="discount__badge">-30%</div>
@@ -93,8 +93,8 @@ export default {
                     <div class="col-4">
                         <div class="card product">
                             <div class="card__header">
-                                <img src="../../public//4.webp" alt="">
-                                <img src="../../public//4b.webp" alt="" class="overlay">
+                                <img src="/4.webp" alt="">
+                                <img src="/4b.webp" alt="" class="overlay">
                                 <div class="fav__heart">&hearts;</div>
                                 <div class="badges">
                                     <div class="discount__badge">-50%</div>
@@ -111,8 +111,8 @@ export default {
                     <div class="col-4">
                         <div class="card product">
                             <div class="card__header">
-                                <img src="../../public//5.webp" alt="">
-                                <img src="../../public//5b.webp" alt="" class="overlay">
+                                <img src="/5.webp" alt="">
+                                <img src="/5b.webp" alt="" class="overlay">
                                 <div class="fav__heart">&hearts;</div>
                             </div>
                             <div class="card__body">
@@ -125,8 +125,8 @@ export default {
                     <div class="col-4">
                         <div class="card product">
                             <div class="card__header">
-                                <img src="../../public//6.webp" alt="">
-                                <img src="../../public//6b.webp" alt="" class="overlay">
+                                <img src="/6.webp" alt="">
+                                <img src="/6b.webp" alt="" class="overlay">
                                 <div class="fav__heart">&hearts;</div>
                                 <div class="badges">
                                     <div class="sustainability__badge">Sostenibilità</div>
@@ -160,19 +160,19 @@ export default {
                         <span class="col-1 bold-text">Trovaci anche su</span>
                         <div class="col-1">
                             <a class="social-logos" href="#">
-                                <img src="../../public//twitter.svg" alt="">
+                                <img src="/twitter.svg" alt="">
                             </a>
                             <a class="social-logos" href="#">
-                                <img src="../../public//facebook.svg" alt="">
+                                <img src="/facebook.svg" alt="">
                             </a>
                             <a class="social-logos" href="#">
-                                <img src="../../public//instagram.svg" alt="">
+                                <img src="/instagram.svg" alt="">
                             </a>
                             <a class="social-logos" href="#">
-                                <img src="../../public//pinterest.svg" alt="">
+                                <img src="/pinterest.svg" alt="">
                             </a>
                             <a class="social-logos" href="#">
-                                <img src="../../public//youtube.svg" alt="">
+                                <img src="/youtube.svg" alt="">
                             </a>
                         </div>
                     </div>
