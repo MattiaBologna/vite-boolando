@@ -30,7 +30,7 @@ export default {
                     </a>
                 </div>
                 <div class="col-4 text-align-right">
-                    <a v-for="(icon, i) in headerIcons" href="#">
+                    <a v-for="(icon, i) in headerIcons" :key="headerIcons[i]" href="#">
                         <img class="header-icons" :src="icon" alt="">
                     </a>
                 </div>

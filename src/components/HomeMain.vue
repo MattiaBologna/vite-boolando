@@ -1,7 +1,17 @@
 <script>
+import dataProducts from '../assets/db.json';
+import ItemCard from './ItemCard.vue';
+
 export default {
+    components: {
+        ItemCard,
+    },
     data() {
         return {
+            products: dataProducts.products,
+            components: {
+                ItemCard
+            },
             itemsList: [
                 {
                     defaultImage: '/1.webp',
@@ -72,26 +82,9 @@ export default {
         <div class="section">
             <div class="container">
                 <div class="row">
-                    <div v-for="(item, i) in itemsList" class="col-4">
-                        <div class="card product">
-                            <div class="card__header">
-                                <img :src="item.defaultImage" alt="">
-                                <img :src="item.hoverImage" alt="" class="overlay">
-                                <div class="fav__heart">&hearts;</div>
-                                <div class="badges">
-                                    <div v-if="item.discount !== 0" class="discount__badge">-{{ item.discount }}%</div>
-                                    <div v-if="item.sustainability" class="sustainability__badge">Sostenibilità</div>
-                                </div>
-                            </div>
-                            <div class="card__body">
-                                <p class="item__brand">{{ item.brand }}</p>
-                                <h3 class="item__name">{{ item.name }}</h3>
-                                <p v-if="item.discount !== 0" class="price">{{ item.discountedPrice }}€
-                                    <span class="pre-sale-price">{{ item.price }}€</span>
-                                </p>
-                                <p v-else class="price">{{ item.price }}</p>
-                            </div>
-                        </div>
+                    <!-- <ItemCard /> -->
+                    <div v-for="product in products" class="col-4" :key="product.id">
+                        <ItemCard :product="product" />
                     </div>
                 </div>
             </div>

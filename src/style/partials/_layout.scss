@@ -91,12 +91,13 @@
     gap: 4px;
 }
 
-.discount__badge {
+.badge__discount {
     background-color: red;
     padding: 4px;
+    order: -1;
 }
 
-.sustainability__badge {
+.badge__tag {
     background-color: #008000;
     padding: 4px;
 }
