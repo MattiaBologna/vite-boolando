@@ -1,6 +1,6 @@
 <script>
-import dataProducts from '../assets/db.json';
 import ItemCard from './ItemCard.vue';
+import { store } from '../store.js';
 
 export default {
     components: {
@@ -8,7 +8,7 @@ export default {
     },
     data() {
         return {
-            products: dataProducts.products,
+            products: store.products,
             components: {
                 ItemCard
             },
