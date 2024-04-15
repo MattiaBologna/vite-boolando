@@ -8,7 +8,7 @@ export default {
     },
     data() {
         return {
-            products: store.products,
+            store,
             components: {
                 ItemCard
             },
@@ -83,7 +83,7 @@ export default {
             <div class="container">
                 <div class="row">
                     <!-- <ItemCard /> -->
-                    <div v-for="product in products" class="col-4" :key="product.id">
+                    <div v-for="product in store.products" class="col-4" :key="product.id">
                         <ItemCard :product="product" />
                     </div>
                 </div>

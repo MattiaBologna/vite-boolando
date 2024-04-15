@@ -6,6 +6,9 @@ import axios from 'axios';
 import { store } from './store.js';
 
 export default {
+  created() {
+    this.fetchData()
+  },
   components: {
     HomeHeader,
     HomeMain,
@@ -14,14 +17,11 @@ export default {
   methods: {
     fetchData() {
       axios.get('http://localhost:3000/products').then((res) => {
-        console.log(res.data)
-        console.log(store)
+        console.log('ress: ', res.data)
+        console.log('pre-store> ', store)
         store.products = res.data
       })
     }
-  },
-  created() {
-    this.fetchData()
   }
 }
 </script>
